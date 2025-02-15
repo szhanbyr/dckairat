@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Др. Оразалиев - Травматолог-ортопед</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <style>
+        /* Previous styles remain the same */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #1a472a;
+    --accent: #2ecc71;
+    --light: #f0fff4;
+    --dark: #2c3e50;
+    --whatsapp: #25D366;
+    --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #ffffff;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* Modern Blob Background */
+.blob-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.1;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.blob-1 {
+    background: var(--accent);
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    left: -200px;
+    animation: float 8s infinite;
+}
+
+.blob-2 {
+    background: var(--primary);
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    right: -150px;
+    animation: float 10s infinite reverse;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(100px, 100px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Glassmorphism Header */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    background: var(--gradient);
+    color: white;
+}
+
+/* Modern Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 5%;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.hero-image:hover img {
+    transform: scale(1);
+}
+
+/* Modern Stats Section */
+.stats {
+    padding: 6rem 5%;
+    background: linear-gradient(to bottom right, #ffffff 50%, var(--light) 50%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+.services-roadmap {
+  padding: 6rem 2rem;
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.roadmap-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #1a472a;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+.roadmap-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.connection-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #1a472a, #2ecc71);
+  transform: translateX(-50%);
+}
+
+.roadmap-step {
+  display: flex;
+  margin-bottom: 4rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.roadmap-step:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.step-connector {
+  flex: 0 0 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connector-dot {
+  width: 20px;
+  height: 20px;
+  background: #2ecc71;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 5px rgba(46, 204, 113, 0.2);
+  transition: all 0.3s ease;
+}
+
+.step-card {
+  flex: 0 0 calc(50% - 50px);
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.connector-line {
+  position: absolute;
+  height: 2px;
+  background: #2ecc71;
+  width: 100%;
+}
+
+.roadmap-step:nth-child(odd) .connector-line {
+  right: 50%;
+}
+
+.roadmap-step:nth-child(even) .connector-line {
+  left: 50%;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1a472a, #2ecc71);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.step-content h3 {
+  color: #1a472a;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.step-content p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.step-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-circle {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.stat-circle svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.stat-circle span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a472a;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .roadmap-step {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  
+  .step-card {
+    flex: 0 0 100%;
+    margin-top: 1rem;
+  }
+  
+  .step-connector {
+    height: 50px;
+  }
+  
+  .connector-line {
+    width: 2px !important;
+    height: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}
+.timeline {
+    max-width: 1000px;
+    margin: 4rem auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--gradient);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin: 2rem 0;
+    position: relative;
+}
+
+.timeline-content {
+    width: calc(50% - 30px);
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Interactive Process Section */
+.process {
+    padding: 6rem 5%;
+    background: var(--light);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.process-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.process-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Modern CTA Button */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gradient);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+}
+
+.cta-button:hover::before {
+    transform: translateX(100%);
+    transition: transform 0.6s;
+}
+
+/* Floating Contact Button */
+.float-contact {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--whatsapp);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.float-contact:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline-content {
+        width: calc(100% - 30px);
+        margin-left: 30px !important;
+    }
+
+    .timeline-item::before {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+        /* Adding new styles */
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .credentials {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .credential-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .infographic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .infographic-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .specialty-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .specialty-tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* New section for publications and awards */
+        .achievements {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(46, 204, 113, 0.05) 0%, rgba(26, 71, 42, 0.05) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.achievements-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.achievements-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.achievements-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.achievements-subtitle {
+    font-size: 1.2rem;
+    color: var(--dark);
+    opacity: 0.8;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+.achievement-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover::before {
+    transform: scaleX(1);
+}
+
+.achievement-large {
+    grid-column: span 8;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.achievement-medium {
+    grid-column: span 4;
+}
+
+.achievement-small {
+    grid-column: span 6;
+}
+
+.achievement-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+    background: var(--primary);
+    color: white;
+    transform: rotate(10deg);
+}
+
+.achievement-year {
+    font-size: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.achievement-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.achievement-description {
+    font-size: 1rem;
+    color: var(--dark);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.stats-strip {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--dark);
+    opacity: 0.8;
+}
+
+.achievement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.achievement-tag {
+    background: var(--light);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-numbers {
+    position: absolute;
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(46, 204, 113, 0.03);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.floating-1 {
+    top: 10%;
+    left: -5%;
+    animation: float 8s infinite;
+}
+
+.floating-2 {
+    bottom: 10%;
+    right: -5%;
+    animation: float 8s infinite reverse;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .achievement-large {
+        grid-column: span 12;
+    }
+    .achievement-medium, .achievement-small {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 768px) {
+    .achievement-large, .achievement-medium, .achievement-small {
+        grid-column: span 12;
+    }
+    .achievement-large {
+        flex-direction: column;
+    }
+}
+
+        .publication-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .publication-year {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-testimonials {
+    background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-nav:hover {
+    background: var(--light);
+    transform: translateY(-50%) scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Previous styles remain the same */
+        /* Add mobile-specific styles */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .mobile-menu .cta-button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-image {
+                margin-top: 2rem;
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .roadmap-step {
+                flex-direction: column !important;
+                align-items: center;
+            }
+
+            .step-card {
+                flex: 0 0 100%;
+                margin-top: 1rem;
+            }
+
+            .step-connector {
+                height: 50px;
+            }
+
+            .connector-line {
+                width: 2px !important;
+                height: 100% !important;
+                left: 50% !important;
+                transform: translateX(-50%);
+            }
+
+            .video-testimonials .testimonial-card {
+                margin-bottom: 2rem;
+            }
+        }
+
+        /* Burger menu styles */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .burger-line {
+            width: 24px;
+            height: 2px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 300px; /* or your desired width */
+    height: 100vh;
+    background: #fff;
+    transition: 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .mobile-nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-nav-links a:hover {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: var(--accent);
+        }
+        /* Update media queries */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+
+            .mobile-nav {
+                display: block;
+            }
+
+            /* Burger animation classes */
+            .burger-menu.active .burger-line:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .burger-menu.active .burger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .burger-menu.active .burger-line:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+
+        .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.close-btn:hover {
+    background: var(--accent);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.close-btn i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+
+.pricing {
+    padding: 8rem 5%;
+    background: linear-gradient(135deg, #f8faf9 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(46, 204, 113, 0.05) 0%, rgba(26, 71, 42, 0.05) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.pricing-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pricing-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-family: 'Playfair Display', serif;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.pricing-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.price-card {
+    background: white;
+    padding: 3.5rem 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.price-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.price-card.featured {
+    transform: scale(1.05);
+    border: 2px solid var(--accent);
+    background: linear-gradient(135deg, #ffffff 0%, #f8faf9 100%);
+    box-shadow: 0 20px 50px rgba(46, 204, 113, 0.15);
+}
+
+.featured-label {
+    position: absolute;
+    top: 25px;
+    right: -40px;
+    background: var(--gradient);
+    color: white;
+    padding: 10px 50px;
+    transform: rotate(45deg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+    letter-spacing: 1px;
+}
+
+.price-tag {
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.price-currency {
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 600;
+    position: relative;
+    top: -10px;
+}
+
+.price-amount {
+    font-size: 3.2rem;
+    color: var(--primary);
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1;
+}
+
+.price-note {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-top: 0.8rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.price-title {
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+}
+
+.price-features li {
+    padding: 1rem 0;
+    color: var(--dark);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.price-features li:hover {
+    color: var(--primary);
+    background: rgba(46, 204, 113, 0.05);
+    border-radius: 8px;
+}
+
+.price-features li:last-child {
+    border-bottom: none;
+}
+
+.price-special {
+    color: var(--accent) !important;
+    font-weight: 600 !important;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 12px;
+    padding: 1rem !important;
+    margin: 1rem 0 !important;
+    border: none !important;
+}
+
+.price-card .cta-button {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .price-card.featured {
+        transform: scale(1.03);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing {
+        padding: 6rem 3%;
+    }
+
+    .pricing-title {
+        font-size: 2.5rem;
+    }
+
+    .price-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .price-card.featured {
+        transform: scale(1);
+    }
+
+    .price-amount {
+        font-size: 2.5rem;
+    }
+
+    .featured-label {
+        right: -45px;
+        font-size: 0.8rem;
+        padding: 8px 40px;
+    }
+
+    .price-title {
+        font-size: 1.5rem;
+    }
+
+    .price-features li {
+        font-size: 1rem;
+    }
+}
+
+/* Add some animations */
+@keyframes priceHover {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.price-card:hover .price-tag {
+    animation: priceHover 1s ease infinite;
+}
+    </style>
+</head>
+<body>
+    <!-- Previous blob background and header remain the same -->
+    <div class="blob-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">Др. Оразалиев К.М.</div>
+            <div class="nav-links">
+                <a href="#about">О враче</a>
+                <a href="#experience">Опыт</a>
+                <a href="#services">Услуги</a>
+                <a href="#testimonials">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </div>
+            <div class="mobile-menu">
+                <a href="#contact" class="cta-button">Запишитесь сейчас</a>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Add mobile navigation -->
+    <div class="mobile-nav">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#about">О враче</a>
+            <a href="#experience">Опыт</a>
+            <a href="#services">Услуги</a>
+            <a href="#testimonials">Отзывы</a>
+            <a href="#contact">Контакты</a>
+            <a href="#contact" class="cta-button">Записаться на приём</a>
+        </div>
+    </div>
+    </header>
+
+
+
+
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-right">
+                <h1>Оразалиев Кайрат Мадетович</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+                    Травматолог-ортопед • Хирург • Кандидат медицинских наук
+                </p>
+                
+                <div class="specialty-tags">
+                    <span class="specialty-tag">🦿 Эндопротезирование</span>
+                    <span class="specialty-tag">🏥 Артроскопия</span>
+                    <span class="specialty-tag">🦾 Роботизированная хирургия</span>
+                    <span class="specialty-tag">👣 Хирургия стопы</span>
+                </div>
+
+                <div class="credentials">
+                    <h3 style="margin-bottom: 1rem;">Квалификация</h3>
+                    <div class="credentials-grid">
+                        <div class="credential-item">
+                            <i class="fas fa-graduation-cap credential-icon"></i>
+                            <div>
+                                <h4>Образование</h4>
+                                <p>КазНМУ им. С.Д. Асфендиярова</p>
+                            </div>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-award credential-icon"></i>
+                            <div>
+                                <h4>Категория</h4>
+                                <p>Высшая квалификационная категория</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+                        ✦ Первичный приём: 15 000 тг.
+                    </p>
+                    <p style="font-size: 1.1rem;">
+                        ✦ Повторный приём: от 10 000 тг.
+                    </p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/dr.orazaliyev" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@dr.orazaliyev1?_t=ZM-8tujO0c0voc&_r=1" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/77768395977" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <a href="#" class="cta-button" style="margin-top: 2rem;">
+                    Записаться на приём
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <img src="./dckairat.png" alt="Др. Оразалиев К.М.">
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous stats section remains the same -->
+    <section class="stats" id="experience">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="stat-number">15+</div>
+                <div>Лет практики</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-number">1000+</div>
+                <div>Операций</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-number">95%</div>
+                <div>Успешных случаев</div>
+            </div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-number">3+</div>
+                <div>Стран обучения</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="achievements" id="achievements">
+        <div class="floating-numbers floating-1">22</div>
+        <div class="floating-numbers floating-2">15</div>
+        
+        <div class="achievements-container">
+            <div class="achievements-header" data-aos="fade-up">
+                <h2 class="achievements-title">Публикации и достижения</h2>
+                <p class="achievements-subtitle">Вклад в развитие современной медицины</p>
+            </div>
+    
+            <div class="achievements-grid">
+                <div class="achievement-card achievement-large" data-aos="fade-right">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-year">
+                            <i class="fas fa-calendar-alt"></i>
+                            2023
+                        </div>
+                        <h3 class="achievement-title">Инновации в эндопротезировании</h3>
+                        <p class="achievement-description">
+                            Революционное исследование в области роботизированного эндопротезирования с использованием ИИ для планирования операций. Опубликовано в международном журнале хирургии.
+                        </p>
+                        <div class="stats-strip">
+                            <div class="stat-item">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Точность</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Цитирований</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Стран внедрения</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="achievement-card achievement-medium" data-aos="fade-up">
+                    <div class="achievement-year">
+                        <i class="fas fa-calendar-alt"></i>
+                        2022
+                    </div>
+                    <h3 class="achievement-title">Роботизированная хирургия суставов</h3>
+                    <p class="achievement-description">
+                        Разработка новых протоколов роботизированной хирургии с применением Stricer Maco.
+                    </p>
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">Инновации</span>
+                        <span class="achievement-tag">Роботохирургия</span>
+                        <span class="achievement-tag">AI</span>
+                    </div>
+                </div>
+    
+                <div class="achievement-card achievement-small" data-aos="fade-left">
+                    <div class="achievement-year">
+                        <i class="fas fa-calendar-alt"></i>
+                        2021
+                    </div>
+                    <h3 class="achievement-title">Современные методы артроскопии</h3>
+                    <p class="achievement-description">
+                        Внедрение малоинвазивных техник с использованием 3D-визуализации.
+                    </p>
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">Артроскопия</span>
+                        <span class="achievement-tag">3D Mapping</span>
+                    </div>
+                </div>
+    
+                <div class="achievement-card achievement-small" data-aos="fade-right">
+                    <div class="achievement-year">
+                        <i class="fas fa-calendar-alt"></i>
+                        2020
+                    </div>
+                    <h3 class="achievement-title">Международное признание</h3>
+                    <p class="achievement-description">
+                        Награда за вклад в развитие ортопедической хирургии в Центральной Азии.
+                    </p>
+                    <div class="achievement-tags">
+                        <span class="achievement-tag">Награда</span>
+                        <span class="achievement-tag">Признание</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Previous services section remains but with added infographics -->
+    <section class="services" id="services">
+        <div class="services-roadmap">
+            <h2 class="roadmap-title">Путь к восстановлению</h2>
+            
+            <div class="roadmap-container">
+              <div class="connection-line"></div>
+              
+              <div class="roadmap-step" data-step="1">
+                <div class="step-connector">
+                  <div class="connector-dot"></div>
+                  <div class="connector-line"></div>
+                </div>
+                <div class="step-card">
+                  <div class="step-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                  </div>
+                  <div class="step-content">
+                    <h3>Диагностика</h3>
+                    <p>Комплексное обследование с использованием современных технологий</p>
+                    <div class="step-stats">
+                      <div class="stat-item">
+                        <div class="stat-circle">
+                          <svg viewBox="0 0 36 36">
+                            <path d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                              fill="none"
+                              stroke="#2ecc71"
+                              stroke-width="2"
+                              stroke-dasharray="98, 100"/>
+                          </svg>
+                          <span>98%</span>
+                        </div>
+                        <span>Точность</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="roadmap-step" data-step="2">
+                <div class="step-connector">
+                  <div class="connector-dot"></div>
+                  <div class="connector-line"></div>
+                </div>
+                <div class="step-card">
+                  <div class="step-icon">
+                    <i class="fas fa-robot"></i>
+                  </div>
+                  <div class="step-content">
+                    <h3>Роботизированная хирургия</h3>
+                    <p>Высокоточные операции с применением ИИ и робототехники</p>
+                    <div class="step-stats">
+                      <div class="stat-item">
+                        <div class="stat-circle">
+                          <svg viewBox="0 0 36 36">
+                            <path d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                              fill="none"
+                              stroke="#2ecc71"
+                              stroke-width="2"
+                              stroke-dasharray="99.8, 100"/>
+                          </svg>
+                          <span>99.8%</span>
+                        </div>
+                        <span>Успех</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="roadmap-step" data-step="3">
+                <div class="step-connector">
+                  <div class="connector-dot"></div>
+                  <div class="connector-line"></div>
+                </div>
+                <div class="step-card">
+                  <div class="step-icon">
+                    <i class="fas fa-walking"></i>
+                  </div>
+                  <div class="step-content">
+                    <h3>Реабилитация</h3>
+                    <p>Индивидуальная программа восстановления</p>
+                    <div class="step-stats">
+                      <div class="stat-item">
+                        <div class="stat-circle">
+                          <svg viewBox="0 0 36 36">
+                            <path d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                              fill="none"
+                              stroke="#2ecc71"
+                              stroke-width="2"
+                              stroke-dasharray="95, 100"/>
+                          </svg>
+                          <span>-40%</span>
+                        </div>
+                        <span>Время</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2 class="pricing-title">Прейскурант</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-tag">
+                        <span class="price-currency">₸</span>
+                        <span class="price-amount">15 000</span>
+                    </div>
+                    <h3 class="price-title">Консультация</h3>
+                    <ul class="price-features">
+                        <li>Консультация к.м.н.</li>
+                        <li>Оразалиева К.М.</li>
+                        <li>Первичный осмотр</li>
+                        <li>План лечения</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Записаться</a>
+                </div>
+                
+                <div class="price-card">
+                    <div class="price-tag">
+                        <span class="price-currency">₸</span>
+                        <span class="price-amount">1 500 000</span>
+                    </div>
+                    <h3 class="price-title">Эндопротезирование</h3>
+                    <ul class="price-features">
+                        <li>Коленного сустава</li>
+                        <li>Тазобедренного сустава</li>
+                        <li>Стандартная операция</li>
+                        <li>Реабилитация</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Записаться</a>
+                </div>
+                
+                <div class="price-card featured">
+                    <div class="featured-label">Робот-ассистент</div>
+                    <div class="price-tag">
+                        <span class="price-currency">₸</span>
+                        <span class="price-amount">3 500 000</span>
+                        <div class="price-note">до конца марта</div>
+                    </div>
+                    <h3 class="price-title">Робот-ассистированное эндопротезирование</h3>
+                    <ul class="price-features">
+                        <li>Коленного сустава</li>
+                        <li>Тазобедренного сустава</li>
+                        <li>Робот Stryker Maco</li>
+                        <li>Реабилитация</li>
+                        <li class="price-special">6 500 000 ₸ за два колена</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-testimonials" id="testimonials">
+        <div class="max-w-7xl mx-auto px-4 py-24">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 2rem; font-family: 'Playfair Display', serif; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Видео отзывы
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: var(--dark);">
+                Истории успешного восстановления наших пациентов
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="position: relative; padding-top: 177.77%; max-height: 400px;">
+                            <video 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                controls>
+                                <source src="./firstvid.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.25rem;">Алия М.</h3>
+                            <p style="color: var(--dark); margin-bottom: 0.25rem; font-size: 0.875rem;">Эндопротезирование колена</p>
+                            <p style="color: var(--dark); opacity: 0.7; font-size: 0.75rem;">Январь 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="position: relative; padding-top: 177.77%; max-height: 400px;">
+                            <video 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                controls>
+                                <source src="./secondvid.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.25rem;">Марат К.</h3>
+                            <p style="color: var(--dark); margin-bottom: 0.25rem; font-size: 0.875rem;">Артроскопия плеча</p>
+                            <p style="color: var(--dark); opacity: 0.7; font-size: 0.75rem;">Декабрь 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="position: relative; padding-top: 177.77%; max-height: 400px;">
+                            <video 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                controls>
+                                <source src="./thirdvideo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.25rem;">Алия М.</h3>
+                            <p style="color: var(--dark); margin-bottom: 0.25rem; font-size: 0.875rem;">Эндопротезирование колена</p>
+                            <p style="color: var(--dark); opacity: 0.7; font-size: 0.75rem;">Январь 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="position: relative; padding-top: 177.77%; max-height: 400px;">
+                            <video 
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                                controls>
+                                <source src="./fourthvideo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="padding: 1rem;">
+                            <h3 style="font-size: 1.125rem; font-weight: bold; margin-bottom: 0.25rem;">Алия М.</h3>
+                            <p style="color: var(--dark); margin-bottom: 0.25rem; font-size: 0.875rem;">Эндопротезирование колена</p>
+                            <p style="color: var(--dark); opacity: 0.7; font-size: 0.75rem;">Январь 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section style="padding: 6rem 5%; background: white;" id="contact">
+        <div style="max-width: 1400px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Запишитесь на приём</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Клиника: Достар мед Сервис (ул. Сеченова, 28)</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div class="process-card" style="min-width: 300px;" data-aos="fade-up">
+                    <i class="fas fa-clock" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Время работы</h3>
+                    <p>Пн-Пт: 9:00-18:00</p>
+                </div>
+                <div class="process-card" style="min-width: 300px;" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-phone" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Контакты</h3>
+                    <p>WhatsApp и телефон для записи</p>
+                    <a href="#" class="cta-button" style="margin-top: 1rem;">
+                        Связаться
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Previous process and contact sections remain the same -->
+
+    <!-- Previous scripts remain the same -->
+    <a href="#" class="float-contact">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Parallax effect for hero image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.hero-image img');
+            if (heroImage) {
+                heroImage.style.transform = `translate3d(0, ${scrolled * 0.1}px, 0)`;
+            }
+        });
+
+        // Interactive cards
+        const cards = document.querySelectorAll('.process-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                cards.forEach(c => c.style.opacity = '0.6');
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                cards.forEach(c => c.style.opacity = '1');
+                card.style.transform = 'scale(1)';
+            });
+        });
+        const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = `fadeInUp 0.6s ease forwards ${entry.target.dataset.step * 0.2}s`;
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.querySelectorAll('.roadmap-step').forEach(step => {
+  observer.observe(step);
+});
+
+// Video Testimonials Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.testimonial-card');
+    const nextButton = document.querySelector('.carousel-nav.next');
+    const prevButton = document.querySelector('.carousel-nav.prev');
+    
+    let currentIndex = 0;
+    
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+    
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    });
+    
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    });
+
+});
+
+      // Burger menu functionality
+const burgerMenu = document.querySelector('.burger-menu');
+const mobileNav = document.querySelector('.mobile-nav');
+const overlay = document.querySelector('.overlay');
+const closeBtn = document.querySelector('.close-btn');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+// Function to close mobile nav and reset everything
+const closeMobileNav = () => {
+    burgerMenu.classList.remove('active');
+    mobileNav.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    mobileNav.style.transform = 'translateX(100%)';
+};
+
+// Function to open mobile nav
+const openMobileNav = () => {
+    burgerMenu.classList.add('active');
+    mobileNav.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    mobileNav.style.transform = 'translateX(0)';
+};
+
+// Burger menu click handler
+burgerMenu.addEventListener('click', () => {
+    if (mobileNav.classList.contains('active')) {
+        closeMobileNav();
+    } else {
+        openMobileNav();
+    }
+});
+
+// Close button click handler
+closeBtn.addEventListener('click', closeMobileNav);
+
+// Overlay click handler
+overlay.addEventListener('click', closeMobileNav);
+
+// Close mobile menu when clicking a link
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+});
+
+        
+
+    </script>
+
+</body>
+</html>
