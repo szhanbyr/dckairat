@@ -577,13 +577,13 @@ nav {
 
         .social-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             margin-top: 2rem;
         }
 
         .social-link {
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 3rem;
             transition: all 0.3s;
         }
 
@@ -1370,9 +1370,10 @@ nav {
         <nav>
             <div class="logo">Др. Оразалиев К.М.</div>
             <div class="nav-links">
+                <a href="#mako-intro">Stryker Mako</a>
                 <a href="#about">О враче</a>
-                <a href="#experience">Опыт</a>
-                <a href="#services">Услуги</a>
+                
+                <a href="#pricing">Цены</a>
                 <a href="#testimonials">Отзывы</a>
                 <a href="#contact">Контакты</a>
             </div>
@@ -1415,7 +1416,7 @@ nav {
                     Инновационная роботизированная хирургия
                 </div>
                 <h1 style="font-size: 3rem; margin-bottom: 1.5rem;">
-                    Операции с Роботом-ассистент Stryker Mako
+                    Роботизированное эндопротезирование с помощью робота ассистента STRYKER MAKO
                 </h1>
                 <p style="font-size: 1.2rem; margin-bottom: 1.5rem; line-height: 1.6;">
                     Революционная технология в ортопедической хирургии, обеспечивающая наивысшую точность и минимальные риски при операциях на суставах
@@ -1563,6 +1564,14 @@ nav {
                             <i class="fas fa-award credential-icon"></i>
                             <div>
                                 <h4>Категория</h4>
+                                <p>Высшая квалификационная</p>
+                            </div>
+                        </div>
+
+                        <div class="credential-item">
+                            <i class="fas fa-book credential-icon"></i>
+                            <div>
+                                <h4>Научная степень</h4>
                                 <p>Кандидат медицинских наук</p>
                             </div>
                         </div>
@@ -1605,7 +1614,62 @@ nav {
     </section>
 
     <!-- Previous stats section remains the same -->
-    
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2 class="pricing-title">Прейскурант</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div class="price-tag">
+                        <span class="price-currency">₸</span>
+                        <span class="price-amount">15 000</span>
+                    </div>
+                    <h3 class="price-title">Консультация</h3>
+                    <ul class="price-features">
+                        <li>Консультация к.м.н.</li>
+                        <li>Оразалиева К.М.</li>
+                        <li>Первичный осмотр</li>
+                        <li>План лечения</li>
+                    </ul>
+                    <a href="https://wa.me/77768395977?text=Здравствуйте, пишу с сайта" target="_blank" class="cta-button">Записаться</a>
+                </div>
+                
+                <div class="price-card">
+                    <div class="price-tag">
+                        <span class="price-currency">₸</span>
+                        <span class="price-amount">1 800 000</span>
+                    </div>
+                    <h3 class="price-title">Эндопротезирование</h3>
+                    <ul class="price-features">
+                        <li>Коленного сустава</li>
+                        <li>Тазобедренного сустава</li>
+                        <li>Стандартная операция</li>
+                        <li>Реабилитация</li>
+                    </ul>
+                    <a href="https://wa.me/77768395977?text=Здравствуйте,%20по%20поводу%20эндопротезирования%20с%20Stryker%20Mako" target="_blank" class="cta-button">Записаться</a>
+                </div>
+                
+                <div class="price-card featured">
+                    <div class="featured-label">Робот-ассистент</div>
+                    <div class="price-tag">
+                        <span class="price-currency">₸</span>
+                        <span class="price-amount">3 500 000</span>
+                        <div class="price-note">до конца марта</div>
+                    </div>
+                    <h3 class="price-title">Робот-ассистированное эндопротезирование</h3>
+                    <ul class="price-features">
+                        <li>Коленного сустава</li>
+                        <li>Тазобедренного сустава</li>
+                        <li>Робот Stryker Mako</li>
+                        <li>Реабилитация</li>
+                        <li class="price-special">6 500 000 ₸ за два колена</li>
+                    </ul>
+                    <a href="https://wa.me/77768395977?text=Здравствуйте,%20по%20поводу%20эндопротезирования%20с%20Stryker%20Mako" target="_blank" class="cta-button">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="services" id="services">
         <div class="services-roadmap">
             <h2 class="roadmap-title">Путь к восстановлению</h2>
@@ -1716,60 +1780,7 @@ nav {
     </section>
 
 
-    <section class="pricing" id="pricing">
-        <div class="pricing-container">
-            <h2 class="pricing-title">Прейскурант</h2>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <div class="price-tag">
-                        <span class="price-currency">₸</span>
-                        <span class="price-amount">15 000</span>
-                    </div>
-                    <h3 class="price-title">Консультация</h3>
-                    <ul class="price-features">
-                        <li>Консультация к.м.н.</li>
-                        <li>Оразалиева К.М.</li>
-                        <li>Первичный осмотр</li>
-                        <li>План лечения</li>
-                    </ul>
-                    <a href="https://wa.me/77768395977?text=Здравствуйте, пишу с сайта" target="_blank" class="cta-button">Записаться</a>
-                </div>
-                
-                <div class="price-card">
-                    <div class="price-tag">
-                        <span class="price-currency">₸</span>
-                        <span class="price-amount">1 800 000</span>
-                    </div>
-                    <h3 class="price-title">Эндопротезирование</h3>
-                    <ul class="price-features">
-                        <li>Коленного сустава</li>
-                        <li>Тазобедренного сустава</li>
-                        <li>Стандартная операция</li>
-                        <li>Реабилитация</li>
-                    </ul>
-                    <a href="https://wa.me/77768395977?text=Здравствуйте,%20по%20поводу%20эндопротезирования%20с%20Stryker%20Mako" target="_blank" class="cta-button">Записаться</a>
-                </div>
-                
-                <div class="price-card featured">
-                    <div class="featured-label">Робот-ассистент</div>
-                    <div class="price-tag">
-                        <span class="price-currency">₸</span>
-                        <span class="price-amount">3 500 000</span>
-                        <div class="price-note">до конца марта</div>
-                    </div>
-                    <h3 class="price-title">Робот-ассистированное эндопротезирование</h3>
-                    <ul class="price-features">
-                        <li>Коленного сустава</li>
-                        <li>Тазобедренного сустава</li>
-                        <li>Робот Stryker Maco</li>
-                        <li>Реабилитация</li>
-                        <li class="price-special">6 500 000 ₸ за два колена</li>
-                    </ul>
-                    <a href="https://wa.me/77768395977?text=Здравствуйте,%20по%20поводу%20эндопротезирования%20с%20Stryker%20Mako" target="_blank" class="cta-button">Записаться</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section class="video-testimonials" id="testimonials">
         <div class="max-w-7xl mx-auto px-4 py-24">
