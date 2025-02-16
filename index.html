@@ -922,15 +922,21 @@ nav {
 
 /* Previous styles remain the same */
         /* Add mobile-specific styles */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                padding: 1rem;
             }
 
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 1.2rem;
+                line-height: 1.4;
             }
+
+            .hero-text p {
+        font-size: 0.9rem;
+    }
 
             .stats-grid {
                 grid-template-columns: 1fr;
@@ -1653,7 +1659,6 @@ nav {
                     <div class="price-tag">
                         <span class="price-currency">₸</span>
                         <span class="price-amount">4 000 000</span>
-                        <div class="price-note">до конца марта</div>
                     </div>
                     <h3 class="price-title">Эндопротезирование с роботом-ассистентом
                         Stryker Mako</h3>
